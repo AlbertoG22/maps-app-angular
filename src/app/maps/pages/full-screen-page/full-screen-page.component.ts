@@ -19,5 +19,4 @@ export class FullScreenPageComponent implements AfterViewInit {
       zoom: 9, // starting zoom
     });
   }
-
 }

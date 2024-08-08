@@ -44,4 +44,9 @@ export class ZoomRangePageComponent implements AfterViewInit {
   zoomOut() {
     this.map?.zoomOut();
   }
+
+  zoomChanged( value: string ) {
+    this.zoom = +value;
+    this.map?.zoomTo( this.zoom );
+  }
 }

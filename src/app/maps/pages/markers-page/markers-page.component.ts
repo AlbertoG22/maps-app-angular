@@ -63,5 +63,10 @@ export class MarkersPageComponent {
 
     this.markers.push({ color, marker });
   }
+
+  deleteMarker( index: number ) {
+    this.markers[index].marker.remove();
+    this.markers.splice( index, 1 );
+  }
 }
 

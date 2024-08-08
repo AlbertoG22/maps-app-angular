@@ -2,7 +2,7 @@
 
 <div class="floating-range p-2">
   <div class="floating-cotent">
-    <button class="btn btn-primary"> - </button>
+    <button (click)="zoomOut()" class="btn btn-primary"> - </button>
 
     <input type="range"
       class="form-range px-2"
@@ -11,7 +11,7 @@
       [value]="zoom"
     >
 
-    <button class="btn btn-primary"> + </button>
+    <button (click)="zoomIn()" class="btn btn-primary"> + </button>
   </div>
 
   <span class="form-label">

@@ -18,20 +18,20 @@ export class MarkersPageComponent {
       container: this.divMap.nativeElement, // container ID
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
       center: this.currentLngLat, // starting position [lng, lat]
-      zoom: 10, // starting zoom
+      zoom: 13, // starting zoom
     });
 
     // -------- FORMA DE CREAR UN MARCADOR --------
-    // puede crearse manualmente el elemento que queremos poner como marcador
-    const markerHtml = document.createElement('div');
-    markerHtml.innerHTML = 'Custom Marker';
+    // // puede crearse manualmente el elemento que queremos poner como marcador
+    // const markerHtml = document.createElement('div');
+    // markerHtml.innerHTML = 'Custom Marker';
 
-    const marker = new Marker({
-      // color: 'red'
-      element: markerHtml
-    })
-      .setLngLat( this.currentLngLat )
-      .addTo( this.map );
+    // const marker = new Marker({
+    //   // color: 'red'
+    //   element: markerHtml
+    // })
+    //   .setLngLat( this.currentLngLat )
+    //   .addTo( this.map );
   }
 }
 

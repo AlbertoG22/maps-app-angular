@@ -21,19 +21,13 @@ export class MiniMapComponent implements AfterViewInit {
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
       center: this.lngLat, // starting position [lng, lat]
       zoom: 15, // starting zoom
+      interactive: false,
     });
 
-    this.addMarker();
-  }
-
-  addMarker() {
-    if( !this.map ) return;
-
-    const marker = new Marker({
-      color: 'red',
-      draggable: false
+    new Marker({
+      color: 'red'
     })
-      .setLngLat( this.lngLat! )
+      .setLngLat( this.lngLat )
       .addTo( this.map );
   }
   

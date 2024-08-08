@@ -70,6 +70,8 @@ export class MarkersPageComponent {
 
     this.markers.push({ color, marker });
     this.saveToLocalStorage();
+
+    marker.on('dragend', () => this.saveToLocalStorage() );
   }
 
   deleteMarker( index: number ) {
@@ -105,8 +107,6 @@ export class MarkersPageComponent {
 
       this.addMarker( coords, color );
     });
-
-    console.log(plainMarkers);
   }
 }
 
